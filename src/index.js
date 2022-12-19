@@ -6,9 +6,11 @@ let app = express()
 
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://kimmi_kumari:kimmi@cluster0.mfdc6.mongodb.net/CROP-PROJECT?retryWrites=true&w=majority')
-.then(() => console.log('mongodb connected successfully '))
-.catch(err => console.log('mongodb not connected'));
+mongoose.connect("mongodb+srv://vikramsingh7568:AlLbBhXCJYPKmwIK@cluster0.5swhv4u.mongodb.net/digital-Agriculture-app2?retryWrites=true&w=majority", {
+    useNewUrlParser: true
+})
+    .then(() => console.log("MongoDb is connected"))
+    .catch(err => console.log(err))
 
 
 app.use('/', route)
